@@ -1,0 +1,548 @@
+/* Dashboard Styles - Additional styles for the admin dashboard */
+
+/* Modern Modal Styles */
+.modern-modal .modal-dialog {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.modern-modal-content {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.dark-mode .modern-modal-content {
+    background: rgba(44, 62, 80, 0.95);
+    color: var(--text-light);
+}
+
+.modern-modal-header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-title-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.modal-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.add-user-icon {
+    background: linear-gradient(135deg, #1cc88a, #1aa978);
+}
+
+.modern-modal-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.modern-btn-close {
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    transition: all 0.3s ease;
+}
+
+.modern-btn-close:hover {
+    background: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+.modern-modal-body {
+    padding: 2rem;
+}
+
+.form-progress-indicator {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.progress-step {
+    font-weight: 600;
+    color: #667eea;
+    display: flex;
+    align-items: center;
+}
+
+.modern-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.modern-form-label {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.dark-mode .modern-form-label {
+    color: var(--text-light);
+}
+
+.modern-input-wrapper {
+    position: relative;
+}
+
+.modern-form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid rgba(209, 213, 219, 0.8);
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.modern-form-control:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    background: white;
+}
+
+.dark-mode .modern-form-control {
+    background: rgba(44, 62, 80, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-light);
+}
+
+.dark-mode .modern-form-control:focus {
+    background: rgba(44, 62, 80, 0.9);
+    border-color: #667eea;
+}
+
+.input-focus-line {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.modern-form-control:focus + .input-focus-line {
+    width: 100%;
+}
+
+.modern-select-wrapper {
+    position: relative;
+}
+
+.modern-form-select {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    border: 2px solid rgba(209, 213, 219, 0.8);
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    appearance: none;
+    cursor: pointer;
+}
+
+.modern-form-select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.dark-mode .modern-form-select {
+    background: rgba(44, 62, 80, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-light);
+}
+
+.select-arrow {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #6b7280;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.password-strength {
+    margin-top: 0.5rem;
+}
+
+.strength-bar {
+    height: 4px;
+    background: #e5e7eb;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.strength-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.strength-text {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.modern-form-notice {
+    background: linear-gradient(135deg, rgba(54, 185, 204, 0.1), rgba(54, 185, 204, 0.05));
+    border: 1px solid rgba(54, 185, 204, 0.3);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.notice-icon {
+    color: #36b9cc;
+    font-size: 1.25rem;
+    margin-top: 0.125rem;
+}
+
+.notice-content strong {
+    color: #36b9cc;
+}
+
+.modern-modal-footer {
+    padding: 1.5rem 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.modern-btn-primary, .modern-btn-secondary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-btn-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.modern-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.modern-btn-secondary {
+    background: rgba(108, 117, 125, 0.1);
+    color: #6c757d;
+    border: 1px solid rgba(108, 117, 125, 0.3);
+}
+
+.modern-btn-secondary:hover {
+    background: rgba(108, 117, 125, 0.2);
+    color: #495057;
+}
+
+.btn-loading {
+    display: none;
+}
+
+.btn-text {
+    display: flex;
+    align-items: center;
+}
+
+/* Loading button state */
+.modern-btn-primary.loading .btn-text {
+    display: none;
+}
+
+.modern-btn-primary.loading .btn-loading {
+    display: flex;
+    align-items: center;
+}
+
+/* Validation feedback */
+.validation-feedback {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    color: #dc3545;
+}
+
+.is-invalid + .validation-feedback {
+    display: block;
+}
+
+.is-valid .modern-form-control {
+    border-color: #28a745;
+}
+
+.is-invalid .modern-form-control {
+    border-color: #dc3545;
+}
+
+/* Responsive improvements */
+@media (max-width: 576px) {
+    .modern-modal-header,
+    .modern-modal-body,
+    .modern-modal-footer {
+        padding: 1rem;
+    }
+    
+    .modern-modal-footer {
+        flex-direction: column;
+    }
+    
+    .modern-btn-primary,
+    .modern-btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Dark mode adjustments */
+.dark-mode .modern-modal-header {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+}
+
+.dark-mode .modern-modal-footer {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .form-progress-indicator {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.dark-mode .modern-form-notice {
+    background: linear-gradient(135deg, rgba(54, 185, 204, 0.2), rgba(54, 185, 204, 0.1));
+    border-color: rgba(54, 185, 204, 0.4);
+}
+
+.dark-mode .modern-btn-secondary {
+    background: rgba(108, 117, 125, 0.2);
+    color: #adb5bd;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .modern-btn-secondary:hover {
+    background: rgba(108, 117, 125, 0.3);
+    color: #f8f9fa;
+}
+
+/* Clickable Card Styles */
+.clickable-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.clickable-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.clickable-card:hover::before {
+    opacity: 1;
+}
+
+.clickable-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+    border-color: rgba(102, 126, 234, 0.3) !important;
+}
+
+.dark-mode .clickable-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+    border-color: rgba(102, 126, 234, 0.5) !important;
+}
+
+.clickable-card .card-overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clickable-card:hover .card-overlay {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.clickable-card:active {
+    transform: translateY(-4px) scale(1.01);
+    transition: all 0.1s ease;
+}
+
+/* Prevent text selection on clickable cards */
+.clickable-card {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Add subtle pulse animation for better interactivity feedback */
+@keyframes cardPulse {
+    0% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.3); }
+    50% { box-shadow: 0 0 0 10px rgba(102, 126, 234, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0); }
+}
+
+.clickable-card:focus {
+    animation: cardPulse 1.5s infinite;
+    outline: none;
+}
+
+/* Modern Form Select Styles */
+.modern-form-select {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    border: 2px solid rgba(209, 213, 219, 0.8);
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    appearance: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.modern-form-select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.dark-mode .modern-form-select {
+    background: rgba(44, 62, 80, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-light);
+}
+
+.dark-mode .modern-form-select:focus {
+    background: rgba(44, 62, 80, 0.9);
+    border-color: #667eea;
+}
+
+.modern-select-wrapper {
+    position: relative;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #6b7280;
+}
+
+.dark-mode .select-arrow {
+    color: #adb5bd;
+}
+
+/* Form Group Spacing */
+.modern-form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.modern-form-label {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+}
+
+.dark-mode .modern-form-label {
+    color: var(--text-light);
+}
+
+/* Input wrapper for focus effects */
+.modern-input-wrapper {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
